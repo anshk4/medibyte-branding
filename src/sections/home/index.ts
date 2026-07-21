@@ -1,0 +1,15 @@
+export { HomeHero } from "./hero";
+export { HomeSpecialityHighlights } from "./speciality-highlights";
+export { HomePatientReviews } from "./patient-reviews";
+export { HomePatientJourney } from "./patient-journey";
+export { HomePricingComparison } from "./pricing-comparison";
+export { HomeAftercareSpotlight } from "./aftercare-spotlight";
+export { HomeInsurance } from "./insurance";
+export { HomePartnerMarquee } from "./partner-marquee";
+export { HomeFeaturedIn } from "./featured-in";
+export { HomeTestimonials } from "./testimonials";
+export { HomeBlogGrid } from "./blog-grid";
+export { HomeTrustEmbassies } from "./trust-embassies";
+export { HomeTrustProof } from "./trust-proof";
+export { HomeFinalCta } from "./final-cta";
+export { HomeContactBoxes } from "./contact-boxes";
