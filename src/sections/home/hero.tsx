@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroPoster from "@/assets/images/cardiology/bg.jpg";
+import heroVideo from "@/assets/videos/hero-bg.mp4";
 
 export function HomeHero() {
   return (
@@ -13,7 +14,7 @@ export function HomeHero() {
         poster={heroPoster}
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/hero-bg.mp4" type="video/mp4" />
+        <source src={heroVideo} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-primary/70" />
       <div className="absolute inset-0 grain opacity-20 pointer-events-none" />
