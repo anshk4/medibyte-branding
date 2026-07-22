@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import heroPoster from "@/assets/images/cardiology/bg.jpg";
 import heroVideo from "@/assets/videos/hero-bg.mp4";
 
 export function HomeHero() {
@@ -11,7 +10,6 @@ export function HomeHero() {
         muted
         loop
         playsInline
-        poster={heroPoster}
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
