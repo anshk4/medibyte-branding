@@ -26,6 +26,14 @@ A premium editorial website for **HJ Unicare**, a medical travel company that co
 
 ---
 
+## Live Site
+
+**Production URL:** https://medibyte-branding-sand.vercel.app
+
+Push to `main` (or the connected default branch) triggers automatic production deployment.
+
+---
+
 ## Routes
 
 | Path | Page |
@@ -47,19 +55,18 @@ A premium editorial website for **HJ Unicare**, a medical travel company that co
 ## Homepage Sections (in order)
 
 1. **Hero** — Full-bleed video background with headline and CTA
-2. **Speciality Highlights** — 6 medical specialities grid
-3. **Patient Reviews** — Social proof carousel
-4. **Patient Journey** — 4-stage journey (Before Treatment → Treatment → Care & Recovery → After Treatment)
-5. **Pricing Comparison** — Cost comparison table (India vs US/UK) with save banner
-6. **Aftercare Spotlight** — Post-treatment recovery & aftercare services
-7. **Insurance** — 12-month post-treatment insurance coverage
-8. **Partner Marquee** — Scrolling partner hospital logos
-9. **Featured In** — Media logos (Forbes, Economic Times, The Hindu, etc.)
-10. **Testimonials** — Video-style testimonial cards
-11. **Blog Grid** — Latest 3 blog posts
-12. **Trust Embassies** — Embassy partnership showcase (Kenya, DRC Congo, etc.)
-13. **Trust Proof** — Credentials & trust signals
-14. **Final CTA** — Contact form with name, email, message
+2. **Founder Intro** — Gurvinder Jit Singh photo, role and philosophy
+3. **Speciality Highlights** — 6 medical specialities grid
+4. **Patient Reviews** — Social proof carousel
+5. **Patient Journey** — 4-stage journey (Before Treatment → Treatment → Care & Recovery → After Treatment)
+6. **Pricing Comparison** — Cost comparison table (India vs US/UK) with save banner
+7. **Aftercare Spotlight** — Post-treatment recovery & aftercare services (feature-grid, no image)
+8. **Insurance** — 12-month post-treatment insurance coverage (icon-centered)
+9. **Partner Marquee** — Scrolling partner hospital **logo images**
+10. **Featured In** — Media logos (Forbes, Economic Times, The Hindu, etc.)
+11. **Testimonials** — Quote-only patient testimonial cards
+12. **Blog Grid** — Latest 3–4 blog posts
+13. **Final CTA** — Text-only contact form with name, email, message
 
 ---
 
@@ -237,13 +244,25 @@ npm run build
 npm run preview
 ```
 
+> **Windows build note:** If the Nitro build step fails with `EBUSY: resource busy or locked` while copying `tslib/package.json`, clean the output folder and retry:
+> ```powershell
+> Remove-Item -Recurse -Force .vercel/output
+> npm run build
+> ```
+
 ---
 
 ## Deployment
 
-Deployed via Vercel with Nitro SSR preset. Push to `main` branch triggers automatic production deployment.
+- **Production URL:** https://medibyte-branding-sand.vercel.app
+- **Platform:** Vercel with Nitro SSR preset
+- **Connected repo:** `anshk4/medibyte-branding`
+- **Default branch:** `redesign/multi-page`
+- Pushes to the connected branch trigger automatic production deployment.
 
 ```bash
+# Build locally, then deploy prebuilt output
+npm run build
 vercel deploy --prebuilt
 ```
 
