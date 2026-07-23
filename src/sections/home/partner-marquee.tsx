@@ -30,12 +30,12 @@ export function HomePartnerMarquee() {
         {items.map((p, i) => (
           <div
             key={`${p.name}-${i}`}
-            className="flex items-center justify-center shrink-0 h-10 lg:h-12"
+            className="flex items-center justify-center shrink-0 h-14 lg:h-16 px-3"
           >
             <img
               src={p.src}
               alt={p.name}
-              className="h-full w-auto max-w-[140px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-smooth"
+              className="h-full w-auto max-w-[180px] object-contain mix-blend-multiply opacity-90 hover:opacity-100 transition-smooth"
               loading="lazy"
             />
           </div>
