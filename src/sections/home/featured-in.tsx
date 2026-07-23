@@ -1,4 +1,4 @@
-import { PlaceholderImage } from "@/components/site/placeholder-image";
+import { Newspaper } from "lucide-react";
 import { MEDIA_LOGOS } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "@/fragments";
 
@@ -14,7 +14,7 @@ export function HomeFeaturedIn() {
               key={m.name}
               className="flex items-center gap-3 text-muted-foreground opacity-70 hover:opacity-100 transition-smooth"
             >
-              <PlaceholderImage alt={m.name} aspect="" className="h-8 w-8 !border-ink/10" />
+              <Newspaper className="h-6 w-6 text-accent" />
               <span className="font-serif text-lg text-ink">{m.name}</span>
             </div>
           ))}

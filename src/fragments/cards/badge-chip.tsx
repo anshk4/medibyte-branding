@@ -1,4 +1,4 @@
-import { PlaceholderImage } from "@/components/site/placeholder-image";
+import { Award } from "lucide-react";
 
 export function BadgeChip({
   label,
@@ -18,10 +18,8 @@ export function BadgeChip({
       {icon ? (
         icon
       ) : (
-        <PlaceholderImage
-          alt={`${label} seal`}
-          aspect=""
-          className={`rounded-full !border-ink/10 ${small ? "h-6 w-6" : "h-8 w-8"}`}
+        <Award
+          className={`${dark ? "text-accent" : "text-primary"} ${small ? "h-4 w-4" : "h-5 w-5"}`}
         />
       )}
       <span

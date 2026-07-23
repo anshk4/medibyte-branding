@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { SectionLabel, SectionTitle } from "@/fragments";
+import { SECTION_IMAGES } from "@/lib/data";
 
 export function HomeTrustedChampions() {
   return (
@@ -31,10 +31,11 @@ export function HomeTrustedChampions() {
           </div>
           <div className="lg:col-span-6">
             <div className="aspect-[16/10] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 shadow-portrait relative">
-              <PlaceholderImage
+              <img
+                src={SECTION_IMAGES.trustedPartners}
                 alt="HJ Unicare trusted partners"
-                aspect=""
-                className="absolute inset-0 h-full w-full !border-ink/10"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>

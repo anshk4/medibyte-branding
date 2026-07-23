@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, UtensilsCrossed, HeartPulse } from "lucide-react";
-import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { SectionLabel, SectionTitle } from "@/fragments";
+import { SECTION_IMAGES } from "@/lib/data";
 
 export function HomeAftercareSpotlight() {
   return (
@@ -18,10 +18,11 @@ export function HomeAftercareSpotlight() {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
           <div className="aspect-[4/3] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 relative">
-            <PlaceholderImage
+            <img
+              src={SECTION_IMAGES.recoverySuite}
               alt="HJ Unicare recovery suite"
-              aspect=""
-              className="absolute inset-0 h-full w-full !border-ink/10"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="space-y-6">

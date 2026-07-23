@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { SectionLabel, SectionTitle } from "@/fragments";
+import { SECTION_IMAGES } from "@/lib/data";
 
 export function HomeFinalCta() {
   return (
@@ -59,10 +59,11 @@ export function HomeFinalCta() {
           </div>
           <div className="hidden lg:block">
             <div className="aspect-[3/4] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 relative">
-              <PlaceholderImage
+              <img
+                src={SECTION_IMAGES.contactTeam}
                 alt="Contact HJ Unicare"
-                aspect=""
-                className="absolute inset-0 h-full w-full !border-ink/10"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>

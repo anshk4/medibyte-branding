@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Quote } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, Quote } from "lucide-react";
 import { STORIES } from "@/lib/data";
-import { PlaceholderImage } from "@/components/site/placeholder-image";
 
 export function HomeTrustProof() {
   const featuredStories = STORIES.slice(0, 2);
@@ -33,11 +32,7 @@ export function HomeTrustProof() {
               key={badge}
               className="flex items-center gap-3 rounded-full border border-ink/15 px-5 py-3"
             >
-              <PlaceholderImage
-                alt={`${badge} seal`}
-                aspect=""
-                className="h-8 w-8 rounded-full !border-ink/10"
-              />
+              <BadgeCheck className="h-6 w-6 text-accent" />
               <span className="text-sm font-medium text-ink">{badge}</span>
             </div>
           ))}
