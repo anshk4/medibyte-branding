@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
-import { PRICING, SECTION_IMAGES } from "@/lib/data";
+import { ArrowRight, PiggyBank } from "lucide-react";
+import { PRICING } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "@/fragments";
 
 export function HomePricingComparison() {
@@ -9,41 +9,30 @@ export function HomePricingComparison() {
       {/* SAVE BANNER */}
       <div className="relative overflow-hidden bg-primary text-paper py-16 lg:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.06)_0%,_transparent_60%)]" />
-        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div>
-              <div className="text-[11px] font-mono tracking-[0.2em] uppercase text-accent">
-                § Save on Treatment
-              </div>
-              <h2 className="mt-4 font-serif text-4xl lg:text-5xl text-paper leading-[0.95]">
-                Save up to <em className="text-accent">70%</em>
-                <br />
-                on your treatment.
-              </h2>
-              <p className="mt-4 text-xl text-paper/70 leading-relaxed text-pretty">
-                Compared to UK private care, with quality treatment, accommodation and recovery
-                support, all included.
-              </p>
-              <div className="mt-6">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center gap-3 rounded-full bg-paper px-8 py-4 text-base font-medium text-ink hover:bg-accent transition-smooth"
-                >
-                  Book a Free Consultation
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="aspect-[4/3] w-full rounded-sm overflow-hidden border border-paper/10">
-                <img
-                  src={SECTION_IMAGES.saveTreatment}
-                  alt="Save on treatment"
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
+        <div className="relative mx-auto max-w-[900px] px-6 lg:px-10 text-center">
+          <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-paper/10 border border-paper/10 mb-6">
+            <PiggyBank className="h-8 w-8 text-accent" />
+          </div>
+          <div className="text-[11px] font-mono tracking-[0.2em] uppercase text-accent">
+            § Save on Treatment
+          </div>
+          <h2 className="mt-4 font-serif text-4xl lg:text-5xl text-paper leading-[0.95]">
+            Save up to <em className="text-accent">70%</em>
+            <br />
+            on your treatment.
+          </h2>
+          <p className="mt-4 text-xl text-paper/70 leading-relaxed text-pretty">
+            Compared to UK private care, with quality treatment, accommodation and recovery support,
+            all included.
+          </p>
+          <div className="mt-6">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-3 rounded-full bg-paper px-8 py-4 text-base font-medium text-ink hover:bg-accent transition-smooth"
+            >
+              Book a Free Consultation
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </div>

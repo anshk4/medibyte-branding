@@ -1,14 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, HandHeart, Plane } from "lucide-react";
 import { SectionLabel, SectionTitle } from "@/fragments";
-import { SECTION_IMAGES } from "@/lib/data";
 
 export function HomeTrustedChampions() {
   return (
     <section className="bg-paper py-20">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-6">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div>
             <SectionLabel>§ Why Families Trust Us</SectionLabel>
             <SectionTitle className="mt-4">
               Trusted by families
@@ -29,15 +28,20 @@ export function HomeTrustedChampions() {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-6">
-            <div className="aspect-[16/10] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 shadow-portrait relative">
-              <img
-                src={SECTION_IMAGES.trustedPartners}
-                alt="HJ Unicare trusted partners"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {[
+              { icon: Plane, label: "Airport to hospital" },
+              { icon: HandHeart, label: "One assigned coordinator" },
+              { icon: ShieldCheck, label: "Accredited partners" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="bg-cream p-6 border border-ink/10 text-center"
+              >
+                <item.icon className="h-8 w-8 text-accent mx-auto mb-4" />
+                <div className="font-serif text-lg text-ink">{item.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

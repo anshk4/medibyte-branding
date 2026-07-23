@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Clock, UtensilsCrossed, HeartPulse } from "lucide-react";
 import { SectionLabel, SectionTitle } from "@/fragments";
-import { SECTION_IMAGES } from "@/lib/data";
 
 export function HomeAftercareSpotlight() {
   return (
@@ -16,57 +15,47 @@ export function HomeAftercareSpotlight() {
           </SectionTitle>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-          <div className="aspect-[4/3] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 relative">
-            <img
-              src={SECTION_IMAGES.recoverySuite}
-              alt="HJ Unicare recovery suite"
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-          <div className="space-y-6">
-            <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-              The days after discharge matter most. Our recovery suites keep your family close to
-              the hospital, with nursing, nutrition, and a coordinator who visits every day.
-            </p>
-            <div className="space-y-4">
-              {[
-                {
-                  icon: Clock,
-                  title: "24/7 on-site doctor and nurse",
-                  detail: "On-call nursing and daily wound checks throughout your stay.",
-                },
-                {
-                  icon: UtensilsCrossed,
-                  title: "Nutritionist-designed meal plans",
-                  detail: "Meals planned around your procedure, medications, and recovery goals.",
-                },
-                {
-                  icon: HeartPulse,
-                  title: "Recovery-optimised rooms",
-                  detail: "Step-down accommodation within 15 minutes of your hospital.",
-                },
-              ].map((feature) => (
-                <div key={feature.title} className="flex items-start gap-4">
-                  <feature.icon className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-serif text-lg text-ink">{feature.title}</h4>
-                    <p className="mt-1 text-base text-muted-foreground">{feature.detail}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
+            The days after discharge matter most. Our recovery suites keep your family close to the
+            hospital, with nursing, nutrition, and a coordinator who visits every day.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {[
+            {
+              icon: Clock,
+              title: "24/7 on-site doctor and nurse",
+              detail: "On-call nursing and daily wound checks throughout your stay.",
+            },
+            {
+              icon: UtensilsCrossed,
+              title: "Nutritionist-designed meal plans",
+              detail: "Meals planned around your procedure, medications, and recovery goals.",
+            },
+            {
+              icon: HeartPulse,
+              title: "Recovery-optimised rooms",
+              detail: "Step-down accommodation within 15 minutes of your hospital.",
+            },
+          ].map((feature) => (
+            <div key={feature.title} className="bg-paper p-8 border border-ink/10">
+              <feature.icon className="h-6 w-6 text-accent mb-4" />
+              <h4 className="font-serif text-xl text-ink mb-2">{feature.title}</h4>
+              <p className="text-base text-muted-foreground">{feature.detail}</p>
             </div>
-            <div>
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 text-base font-medium text-paper hover:bg-primary transition-smooth"
-              >
-                Learn More
-                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 text-base font-medium text-paper hover:bg-primary transition-smooth"
+          >
+            Learn More
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>

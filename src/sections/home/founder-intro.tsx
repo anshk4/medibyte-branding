@@ -28,8 +28,8 @@ export function HomeFounderIntro() {
             </h2>
             <p className="mt-6 text-xl text-muted-foreground leading-relaxed text-pretty max-w-2xl">
               I am Gurvinder Jit Singh, Co-Founder of HJ Unicare. For over a decade, I have helped
-              families cross borders for care they can trust — combining accredited hospitals,
-              transparent pricing, and one steady hand from first call to follow-up.
+              families cross borders for care they can trust. Accredited hospitals. Transparent
+              pricing. One steady hand from first call to follow-up.
             </p>
             <p className="mt-4 text-lg text-ink/80 leading-relaxed text-pretty max-w-2xl">
               When someone you love needs treatment, you do not need more choices. You need the right

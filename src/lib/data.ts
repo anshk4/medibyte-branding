@@ -63,17 +63,6 @@ import coverPostOpCare from "@/assets/images/blog-covers/post-operative-care-hot
 import coverWhenFlyHome from "@/assets/images/blog-covers/when-can-i-fly-home-after-surgery.jpg";
 import coverEconomics from "@/assets/images/blog-covers/economics-of-medical-travel.jpg";
 
-// AI-generated images for sections and specialities without stock photography
-import recoverySuiteImg from "@/assets/images/generated/recovery-suite.jpg";
-import contactTeamImg from "@/assets/images/generated/contact-team.jpg";
-import trustedPartnersImg from "@/assets/images/generated/trusted-partners.jpg";
-import wellnessConsultantImg from "@/assets/images/generated/wellness-consultant.jpg";
-import wellnessSuiteImg from "@/assets/images/generated/wellness-suite.jpg";
-import oncologySuiteImg from "@/assets/images/generated/oncology-suite.jpg";
-import pediatricsSuiteImg from "@/assets/images/generated/pediatrics-suite.jpg";
-import insuranceAssuranceImg from "@/assets/images/generated/insurance-assurance.jpg";
-import saveTreatmentImg from "@/assets/images/generated/save-treatment.jpg";
-
 export const ASSETS = {
   gurvinder: gurvinderPortrait,
   logo: logoPhoto,
@@ -83,14 +72,6 @@ export const ASSETS = {
 export const GURVINDER_IMAGES = {
   portrait: gurvinderPortrait,
   author: gurvinderAuthor,
-};
-
-export const SECTION_IMAGES = {
-  recoverySuite: recoverySuiteImg,
-  contactTeam: contactTeamImg,
-  trustedPartners: trustedPartnersImg,
-  insuranceAssurance: insuranceAssuranceImg,
-  saveTreatment: saveTreatmentImg,
 };
 
 export const SPECIALITY_IMAGES: Record<
@@ -103,10 +84,10 @@ export const SPECIALITY_IMAGES: Record<
     suite: ivffertilitySuite,
     consultant: ivffertilityConsultant,
   },
-  oncology: { bg: oncologyBg, suite: oncologySuiteImg, consultant: oncologyConsultant },
+  oncology: { bg: oncologyBg, consultant: oncologyConsultant },
   orthopedics: { bg: orthopedicsBg, suite: orthopedicsSuite, consultant: orthopedicsConsultant },
-  pediatrics: { bg: pediatricsBg, suite: pediatricsSuiteImg, consultant: pediatricsConsultant },
-  wellness: { bg: wellnessBg, suite: wellnessSuiteImg, consultant: wellnessConsultantImg },
+  pediatrics: { bg: pediatricsBg, consultant: pediatricsConsultant },
+  wellness: { bg: wellnessBg },
 };
 
 // Best visible (non-background) image per speciality — chosen from suite/consultant by resolution/quality
@@ -114,9 +95,9 @@ export const SPECIALITY_FEATURED_IMAGE: Record<string, string | undefined> = {
   orthopedics: orthopedicsSuite,
   cardiology: cardiologyConsultant,
   "ivf-fertility": ivffertilitySuite,
-  oncology: oncologySuiteImg,
-  pediatrics: pediatricsSuiteImg,
-  wellness: wellnessSuiteImg,
+  oncology: oncologyConsultant,
+  pediatrics: pediatricsConsultant,
+  wellness: undefined,
 };
 
 export const HOSPITAL_IMAGES: Record<string, string> = {

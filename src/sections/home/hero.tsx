@@ -1,24 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroVideo from "@/assets/videos/hero-bg.mp4";
-import heroFallback from "@/assets/images/generated/hero-fallback.jpg";
 
 export function HomeHero() {
   return (
     <section id="top" className="relative overflow-hidden min-h-[80vh] flex items-center">
-      {/* Mobile fallback image — video is left untouched for desktop */}
-      <img
-        src={heroFallback}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover lg:hidden"
-      />
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 h-full w-full object-cover hidden lg:block"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
