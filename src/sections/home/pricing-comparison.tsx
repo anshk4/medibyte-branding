@@ -2,12 +2,18 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, PiggyBank } from "lucide-react";
 import { PRICING } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "@/fragments";
+import saveOnTreatmentImg from "@/assets/images/sections/save-on-treatment.jpg";
 
 export function HomePricingComparison() {
   return (
     <section>
       {/* SAVE BANNER */}
       <div className="relative overflow-hidden bg-primary text-paper py-16 lg:py-20">
+        <img
+          src={saveOnTreatmentImg}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.12]"
+        />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.06)_0%,_transparent_60%)]" />
         <div className="relative mx-auto max-w-[900px] px-6 lg:px-10 text-center">
           <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-paper/10 border border-paper/10 mb-6">

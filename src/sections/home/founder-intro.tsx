@@ -10,7 +10,7 @@ export function HomeFounderIntro() {
           <div className="lg:col-span-5">
             <div className="aspect-[4/5] w-full rounded-sm overflow-hidden bg-cream border border-ink/10 shadow-portrait relative">
               <img
-                src={ASSETS.gurvinder}
+                src={ASSETS.author}
                 alt="Gurvinder Jit Singh"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
