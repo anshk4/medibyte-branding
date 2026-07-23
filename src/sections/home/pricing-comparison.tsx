@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { PRICING } from "@/lib/data";
+import { PRICING, SECTION_IMAGES } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "@/fragments";
 
 export function HomePricingComparison() {
@@ -35,7 +35,14 @@ export function HomePricingComparison() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="aspect-[4/3] w-full bg-paper/5 border border-paper/10 rounded-sm" />
+              <div className="aspect-[4/3] w-full rounded-sm overflow-hidden border border-paper/10">
+                <img
+                  src={SECTION_IMAGES.saveTreatment}
+                  alt="Save on treatment"
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 export { HomeHero } from "./hero";
+export { HomeFounderIntro } from "./founder-intro";
 export { HomeSpecialityHighlights } from "./speciality-highlights";
 export { HomePatientReviews } from "./patient-reviews";
 export { HomePatientJourney } from "./patient-journey";

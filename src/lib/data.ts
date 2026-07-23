@@ -71,6 +71,8 @@ import wellnessConsultantImg from "@/assets/images/generated/wellness-consultant
 import wellnessSuiteImg from "@/assets/images/generated/wellness-suite.jpg";
 import oncologySuiteImg from "@/assets/images/generated/oncology-suite.jpg";
 import pediatricsSuiteImg from "@/assets/images/generated/pediatrics-suite.jpg";
+import insuranceAssuranceImg from "@/assets/images/generated/insurance-assurance.jpg";
+import saveTreatmentImg from "@/assets/images/generated/save-treatment.jpg";
 
 export const ASSETS = {
   gurvinder: gurvinderPortrait,
@@ -87,6 +89,8 @@ export const SECTION_IMAGES = {
   recoverySuite: recoverySuiteImg,
   contactTeam: contactTeamImg,
   trustedPartners: trustedPartnersImg,
+  insuranceAssurance: insuranceAssuranceImg,
+  saveTreatment: saveTreatmentImg,
 };
 
 export const SPECIALITY_IMAGES: Record<

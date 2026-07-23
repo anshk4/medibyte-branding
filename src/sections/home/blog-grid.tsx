@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar } from "lucide-react";
-import { BLOG_POSTS } from "@/lib/data";
+import { BLOG_POSTS, BLOG_COVER_IMAGES } from "@/lib/data";
 import { SectionLabel, SectionTitle } from "@/fragments";
 
 export function HomeBlogGrid() {
@@ -26,23 +26,25 @@ export function HomeBlogGrid() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              to="/blog/$slug"
-              params={{ slug: post.slug }}
-              className="group bg-cream border border-ink/10 overflow-hidden hover:bg-paper transition-smooth flex flex-col"
-            >
-              <div className="aspect-[16/10] bg-paper overflow-hidden">
-                {post.image && (
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="h-full w-full object-cover transition-smooth duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                )}
-              </div>
+          {posts.map((post) => {
+            const cover = post.image ?? BLOG_COVER_IMAGES[post.slug];
+            return (
+              <Link
+                key={post.slug}
+                to="/blog/$slug"
+                params={{ slug: post.slug }}
+                className="group bg-cream border border-ink/10 overflow-hidden hover:bg-paper transition-smooth flex flex-col"
+              >
+                <div className="aspect-[16/10] bg-paper overflow-hidden">
+                  {cover && (
+                    <img
+                      src={cover}
+                      alt={post.title}
+                      className="h-full w-full object-cover transition-smooth duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-accent mb-3">
                   {post.category}
@@ -58,7 +60,8 @@ export function HomeBlogGrid() {
                 </div>
               </div>
             </Link>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

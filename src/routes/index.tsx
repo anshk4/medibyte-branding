@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ASSETS } from "@/lib/data";
 import {
   HomeHero,
+  HomeFounderIntro,
   HomeSpecialityHighlights,
   HomePatientReviews,
   HomePatientJourney,
@@ -41,6 +42,7 @@ function Home() {
   return (
     <div className="bg-background text-foreground">
       <HomeHero />
+      <HomeFounderIntro />
       <HomeSpecialityHighlights />
       <HomePatientReviews />
       <HomePatientJourney />
